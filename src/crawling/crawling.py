@@ -9,7 +9,7 @@ import urllib.request
 import os
 
 ITEM = '캔 콜라'
-ENG_ITEM = 'CanCoke'
+ENG_ITEM = 'TestCoke'
 FOLDER = 'CannedDrink'
 IMG_COUNT = 500
  
