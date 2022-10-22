@@ -64,6 +64,7 @@ for i in range(2, IMG_COUNT):
     try:
         img = driver.find_element(By.CSS_SELECTOR, f"#islrg > div.islrc > div:nth-child({i}) > a.wXeWr.islib.nfEiy > div.bRMDJf.islir > img")
         imgLink = img.get_attribute("src")
+        
         print(f'[O] Success {i}')
         address = f'./data/{FOLDER}/{ENG_ITEM}'
         urllib.request.urlretrieve(imgLink, f'{address}/{ENG_ITEM}{i}.jpg')
