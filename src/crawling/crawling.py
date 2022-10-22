@@ -7,8 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from urllib.request import (urlopen, urlparse, urlunparse, urlretrieve)
 import urllib.request
 
-ITEM = '참치마요 삼각김밥'
-ENG_ITEM = 'Tuna'
+ITEM = '전주비빔 삼각김밥'
+ENG_ITEM = 'JeonjuBibim'
 IMG_COUNT = 500
 
 chrome_path ='chromedriver.exe'
@@ -58,4 +58,3 @@ for i in range(2, IMG_COUNT):
         urllib.request.urlretrieve(imgLink, f'{address}/{ENG_ITEM}{i}.jpg')
     except:
         print(f'[X] Error {i}')
-    time.sleep(0.3)
