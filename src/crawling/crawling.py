@@ -8,8 +8,8 @@ from urllib.request import (urlopen, urlparse, urlunparse, urlretrieve)
 import urllib.request
 import os
 
-ITEM = '캔 사이다'
-ENG_ITEM = 'CanSider'
+ITEM = '캔 콜라'
+ENG_ITEM = 'CanCoke'
 FOLDER = 'CannedDrink'
 IMG_COUNT = 500
  
