@@ -7,8 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from urllib.request import (urlopen, urlparse, urlunparse, urlretrieve)
 import urllib.request
 
-ITEM = '참치김치볶음 삼각김밥'
-ENG_ITEM = 'TunaKimchi'
+ITEM = '소고기 고추장 삼각김밥'
+ENG_ITEM = 'BeefGochujang'
 IMG_COUNT = 500
 
 chrome_path ='chromedriver.exe'
