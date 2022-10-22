@@ -6,10 +6,21 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from urllib.request import (urlopen, urlparse, urlunparse, urlretrieve)
 import urllib.request
+import os
 
-ITEM = '소고기 고추장 삼각김밥'
-ENG_ITEM = 'BeefGochujang'
+ITEM = '캔 사이다'
+ENG_ITEM = 'CanSider'
+FOLDER = 'CannedDrink'
 IMG_COUNT = 500
+ 
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print ('Error: Creating directory. ' +  directory)
+ 
+createFolder(f'./data/{FOLDER}/{ENG_ITEM}')
 
 chrome_path ='chromedriver.exe'
 # base_url = "https://www.google.co.kr/imghp"
@@ -54,7 +65,7 @@ for i in range(2, IMG_COUNT):
         img = driver.find_element(By.CSS_SELECTOR, f"#islrg > div.islrc > div:nth-child({i}) > a.wXeWr.islib.nfEiy > div.bRMDJf.islir > img")
         imgLink = img.get_attribute("src")
         print(f'[O] Success {i}')
-        address = f'./data/TriangleKimbap/{ENG_ITEM}'
+        address = f'./data/{FOLDER}/{ENG_ITEM}'
         urllib.request.urlretrieve(imgLink, f'{address}/{ENG_ITEM}{i}.jpg')
     except:
         print(f'[X] Error {i}')
